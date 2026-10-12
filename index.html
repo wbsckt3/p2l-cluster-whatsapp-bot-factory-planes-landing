@@ -1,0 +1,1657 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>P2L — WhatsApp IA Bot Factory</title>
+  <meta name="description" content="Bot WhatsApp a la medida: respuestas automáticas, IA/LLM, menús, pedidos, citas, facturas, escalado a humano, notificaciones y registro de conversaciones." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="theme-color" content="#f7fbf8" />
+  <link rel="canonical" href="https://wbsckt3.github.io/p2l-cluster-whatsapp-bot-factory-planes-landing/" />
+  <link rel="icon" href="assets/p2l-mark.svg" type="image/svg+xml" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://wbsckt3.github.io/p2l-cluster-whatsapp-bot-factory-planes-landing/" />
+  <meta property="og:title" content="P2L — WhatsApp IA Bot Factory" />
+  <meta property="og:description" content="Bot WhatsApp a la medida de tu empresa: IA, pedidos, citas, facturas, menús y escalado a humano." />
+  <meta property="og:image" content="https://wbsckt3.github.io/p2l-cluster-whatsapp-bot-factory-planes-landing/assets/p2l-mark.svg" />
+  <meta property="og:site_name" content="P2L" />
+  <meta property="og:locale" content="es_ES" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="P2L — WhatsApp IA Bot Factory" />
+  <meta name="twitter:description" content="Bot WhatsApp a la medida: IA, pedidos, citas, facturas, menús y escalado a humano." />
+  <meta name="twitter:image" content="https://wbsckt3.github.io/p2l-cluster-whatsapp-bot-factory-planes-landing/assets/p2l-mark.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "P2L",
+    "url": "https://wbsckt3.github.io/p2l-cluster-whatsapp-bot-factory-planes-landing/",
+    "logo": "https://wbsckt3.github.io/p2l-cluster-whatsapp-bot-factory-planes-landing/assets/p2l-mark.svg"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "P2L WhatsApp IA Bot Factory",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "url": "https://wbsckt3.github.io/p2l-cluster-whatsapp-bot-factory-planes-landing/",
+    "description": "Fábrica white-label para orquestar bots WhatsApp con IA: n empresas, Meta Cloud API, skills, flujos y RUNBOOK de deploy.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "COP"
+    },
+    "creator": {
+      "@type": "Organization",
+      "name": "P2L",
+      "url": "https://wbsckt3.github.io/p2l-cluster-whatsapp-bot-factory-planes-landing/"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg0: #f7fbf8;
+      --bg1: #ffffff;
+      --ink: #0a1f18;
+      --muted: #4d665c;
+      --leaf: #12784a;
+      --leaf-deep: #0e6840;
+      --glow: #3ecf8e;
+      --line: rgba(18, 120, 74, 0.28);
+      --header-h: 68px;
+      --danger: #b42318;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Source Sans 3", sans-serif;
+      background: var(--bg0);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1080px, calc(100% - 32px)); margin-inline: auto; }
+
+    .site-header {
+      position: fixed; inset: 0 0 auto 0; z-index: 40; height: var(--header-h);
+      background: linear-gradient(90deg, #0e6840, #12784a);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    }
+    .site-header__inner {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .lang-switch {
+      display: inline-flex;
+      flex-shrink: 0;
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .lang-switch button {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.78);
+      font-family: Sora, sans-serif;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      padding: 7px 11px;
+      cursor: pointer;
+    }
+    .lang-switch button.is-on {
+      background: #ffffff;
+      color: #0e6840;
+    }
+    .brand {
+      font-family: Sora, sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.05rem, 2.4vw, 1.35rem);
+      letter-spacing: -0.04em;
+      line-height: 1.15;
+      display: inline-flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.35em 0.5em;
+      color: #ffffff;
+      min-width: 0;
+      max-width: 100%;
+      flex: 1;
+    }
+    .brand__name { flex-shrink: 0; }
+    .brand__name em {
+      font-style: normal;
+      color: #ffffff;
+    }
+    .brand__product {
+      font-size: 0.72em;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      color: rgba(255, 255, 255, 0.88);
+      white-space: normal;
+      overflow: visible;
+      text-overflow: unset;
+    }
+    @media (max-width: 560px) {
+      :root { --header-h: 76px; }
+      .brand {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+        line-height: 1.2;
+      }
+      .brand__product {
+        font-size: 0.68em;
+        letter-spacing: 0.02em;
+        max-width: 100%;
+      }
+    }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 10px 18px; border-radius: 10px; font-weight: 600; font-size: 0.95rem;
+      border: 1px solid var(--line); background: transparent; color: var(--ink);
+      font-family: Sora, sans-serif;
+      cursor: pointer;
+    }
+    .btn--primary {
+      background: linear-gradient(135deg, var(--leaf-deep), #147a4c);
+      border-color: var(--leaf);
+      color: #f7fbf8;
+    }
+    .btn--lg { padding: 14px 24px; font-size: 1rem; }
+    .btn:disabled { opacity: 0.55; cursor: not-allowed; }
+
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: calc(var(--header-h) + 32px) 0 56px;
+      overflow: hidden;
+    }
+    .hero__bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 90% 70% at 50% 35%, rgba(62, 207, 142, 0.34), transparent 58%),
+        radial-gradient(ellipse 55% 45% at 12% 85%, rgba(26, 159, 99, 0.16), transparent 52%),
+        radial-gradient(ellipse 45% 40% at 88% 75%, rgba(62, 207, 142, 0.18), transparent 50%),
+        linear-gradient(165deg, #ffffff 0%, #f7fbf8 48%, #eef6f1 100%);
+    }
+    .hero__bg::before {
+      content: "";
+      position: absolute;
+      width: min(72vw, 640px);
+      height: min(72vw, 640px);
+      left: 50%;
+      top: 42%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(62, 207, 142, 0.28), transparent 68%);
+      animation: heroGlow 7s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+    .hero__bg::after {
+      content: "";
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(10, 31, 24, 0.2) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(10, 31, 24, 0.2) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(ellipse 88% 82% at 50% 42%, rgba(0,0,0,0.95), transparent 96%);
+      pointer-events: none;
+    }
+    @keyframes heroGlow {
+      from { opacity: 0.65; transform: translate(-50%, -50%) scale(1); }
+      to { opacity: 1; transform: translate(-50%, -52%) scale(1.08); }
+    }
+    .hero__content {
+      position: relative;
+      z-index: 1;
+      width: min(920px, calc(100% - 32px));
+      margin-inline: auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: heroRise 0.75s ease both;
+    }
+    @keyframes heroRise {
+      from { opacity: 0; transform: translateY(22px); }
+      to { opacity: 1; transform: none; }
+    }
+    .hero__brand-row {
+      margin: 0 0 clamp(18px, 3.5vh, 28px);
+      width: 100%;
+    }
+    .hero__brand {
+      margin: 0;
+      font-family: Sora, sans-serif;
+      font-size: clamp(3rem, 11vw, 5.75rem);
+      font-weight: 700;
+      letter-spacing: -0.05em;
+      line-height: 0.95;
+      color: var(--ink);
+    }
+    .hero__brand em {
+      font-style: normal;
+      color: var(--leaf);
+    }
+    .hero__product {
+      margin: 10px 0 0;
+      font-family: Sora, sans-serif;
+      font-size: clamp(0.78rem, 1.8vw, 1rem);
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .hero__title {
+      margin: 0 0 clamp(14px, 2.5vh, 20px);
+      font-family: Sora, sans-serif;
+      font-size: clamp(1.45rem, 4.2vw, 2.35rem);
+      font-weight: 700;
+      letter-spacing: -0.035em;
+      line-height: 1.18;
+      color: var(--ink);
+      max-width: min(22em, 100%);
+    }
+    .hero__lead {
+      margin: 0 0 clamp(28px, 4.5vh, 40px);
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2.2vw, 1.28rem);
+      line-height: 1.5;
+      font-weight: 500;
+      max-width: 36rem;
+    }
+    .hero__ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+    .hero__ctas .btn--lg {
+      padding: 16px 28px;
+      font-size: 1.05rem;
+      min-width: min(240px, 100%);
+    }
+    .hero__ctas .btn--ghost {
+      background: rgba(255, 255, 255, 0.72);
+      border-color: var(--line);
+      color: var(--ink);
+      font-size: 1.05rem;
+    }
+    .hero__ctas .btn--ghost:hover {
+      border-color: var(--leaf);
+      color: var(--leaf);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero__bg::before, .hero__content { animation: none; }
+    }
+
+    .section { padding: 72px 0; }
+    .section--alt {
+      background: linear-gradient(180deg, #ffffff, #eef6f1);
+      border-block: 1px solid var(--line);
+    }
+    .section__tag {
+      display: inline-block;
+      margin-bottom: 10px;
+      font-family: Sora, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--leaf);
+    }
+    .section__title {
+      margin: 0 0 12px;
+      font-family: Sora, sans-serif;
+      font-size: clamp(1.45rem, 3vw, 1.9rem);
+      letter-spacing: -0.03em;
+    }
+    .section__lead {
+      margin: 0 0 28px;
+      color: var(--muted);
+      max-width: 40rem;
+      font-size: 1.05rem;
+    }
+
+    .cap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 12px 14px;
+      margin: 0 0 28px;
+      padding: 0;
+      list-style: none;
+    }
+    .cap-grid li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(10, 31, 24, 0.55);
+      color: var(--ink);
+      font-size: 0.98rem;
+      line-height: 1.35;
+    }
+    .cap-grid__icon {
+      flex-shrink: 0;
+      font-size: 1.25rem;
+      line-height: 1.2;
+      width: 1.6em;
+      text-align: center;
+    }
+    .cap-grid__label {
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+    .cap-closer {
+      margin: 0;
+      max-width: 36rem;
+      font-family: Sora, sans-serif;
+      font-size: clamp(1.05rem, 2.4vw, 1.2rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.4;
+      color: var(--ink);
+    }
+    .cap-closer em {
+      font-style: normal;
+      color: var(--leaf);
+    }
+
+    .steps {
+      display: grid;
+      gap: 18px;
+      counter-reset: step;
+      margin: 0;
+      padding: 0;
+    }
+    .steps li {
+      list-style: none;
+      position: relative;
+      padding: 0 0 0 52px;
+      color: var(--muted);
+    }
+    .steps li::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute; left: 0; top: 0;
+      width: 36px; height: 36px;
+      border-radius: 10px;
+      display: grid; place-items: center;
+      font-family: Sora, sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #f7fbf8;
+      background: var(--leaf);
+    }
+    .steps strong { display: block; color: var(--ink); margin-bottom: 4px; font-family: Sora, sans-serif; }
+    .steps a,
+    #conectar .section__lead a {
+      color: var(--leaf);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .steps a:hover,
+    #conectar .section__lead a:hover { opacity: 0.9; }
+
+    .plans-intro {
+      width: 100%;
+      max-width: none;
+      margin: 0 0 28px;
+    }
+    .plans-intro p {
+      margin: 0 0 12px;
+      max-width: none;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.5;
+    }
+    .plans-intro p:last-child { margin-bottom: 0; }
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+    @media (max-width: 980px) {
+      .plans { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 640px) {
+      .plans { grid-template-columns: 1fr; }
+    }
+    .plan {
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.78);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .plan h3 {
+      margin: 0;
+      font-family: Sora, sans-serif;
+      font-size: 1.05rem;
+    }
+    .plan .price {
+      margin: 0;
+      font-family: Sora, sans-serif;
+      font-size: 1.35rem;
+      color: var(--leaf);
+      font-weight: 700;
+    }
+    .plan .desc { margin: 0; color: var(--muted); font-size: 0.92rem; }
+    .plan .meta { margin: 0; color: var(--muted); font-size: 0.88rem; }
+    .plan .features {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex: 1;
+    }
+    .plan-caps {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+    .plan-caps li {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 0;
+      padding: 6px 8px;
+      border-radius: 8px;
+      color: #1f2937;
+      font-size: 0.72rem;
+      line-height: 1.25;
+    }
+    .plan-caps li.is-white {
+      background: rgba(10, 31, 24, 0.05);
+      color: #0a1f18;
+      border: 1px solid rgba(10, 31, 24, 0.1);
+      backdrop-filter: blur(8px);
+    }
+    .plan-caps li.is-cafe {
+      background: rgba(236, 229, 221, 0.58);
+      color: #1c1917;
+      border: 1px solid rgba(236, 229, 221, 0.4);
+      backdrop-filter: blur(8px);
+    }
+    .plan-caps li.is-off {
+      opacity: 0.38;
+      filter: grayscale(0.55);
+    }
+    .plan-caps__logo { width: 18px; height: 18px; flex: 0 0 auto; display: flex; }
+    .plan-caps__logo svg,
+    .plan-caps__logo img { width: 18px; height: 18px; display: block; object-fit: contain; }
+    .plan.plan--enterprise .plan-caps { grid-template-columns: 1fr 1fr; }
+    .plan .features li {
+      color: var(--ink);
+      font-size: 0.88rem;
+      line-height: 1.35;
+      padding-left: 0;
+    }
+    .plan .features li::before {
+      content: "• ";
+    }
+    .plan .wa-tag {
+      font-size: 11px;
+      font-family: Sora, sans-serif;
+      color: var(--leaf);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .plan.plan--enterprise {
+      grid-column: 1 / -1;
+      display: block;
+      border-color: rgba(62, 207, 142, 0.45);
+      background: linear-gradient(165deg, rgba(62, 207, 142, 0.28), rgba(255, 255, 255, 0.92));
+    }
+    .plan-enterprise-line {
+      margin: 0;
+      font-family: Sora, sans-serif;
+      font-size: clamp(1.05rem, 2vw, 1.28rem);
+      font-weight: 600;
+      line-height: 1.45;
+      color: var(--ink);
+    }
+    .plan.plan--enterprise .ent-intro {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .plan.plan--enterprise .features {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px 18px;
+      flex: initial;
+      align-content: start;
+    }
+    .plan .btn--wa {
+      background: #128c7e;
+      border-color: #25d366;
+      color: #fff;
+      text-align: center;
+      width: 100%;
+      text-decoration: none;
+      box-sizing: border-box;
+    }
+    @media (max-width: 800px) {
+      .plan.plan--enterprise {
+        grid-template-columns: 1fr;
+      }
+      .plan.plan--enterprise .features {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 520px) {
+      .plan.plan--enterprise .features {
+        grid-template-columns: 1fr;
+      }
+    }
+    .plan label {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .plan input {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      color: var(--ink);
+      font-family: inherit;
+      margin-bottom: 8px;
+    }
+    .plan-status {
+      min-height: 1.2em;
+      font-size: 0.85rem;
+      color: var(--leaf);
+    }
+    .plan-status.is-error { color: var(--danger); }
+
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 800px) {
+      .pillars { grid-template-columns: 1fr; }
+    }
+    .pillar h3 {
+      margin: 0 0 8px;
+      font-family: Sora, sans-serif;
+      font-size: 1.05rem;
+      color: var(--leaf);
+    }
+    .pillar p { margin: 0; color: var(--muted); }
+
+    .site-footer {
+      padding: 28px 0 40px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .site-footer__inner {
+      display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px;
+    }
+    .site-footer a:hover { color: var(--leaf); }
+    .site-footer__links { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    .site-footer__nitro {
+      flex: 1 0 100%;
+      margin: 4px 0 0;
+      font-weight: 700;
+      color: var(--ink, #0f172a);
+    }
+    .site-footer__bolt { color: #f5c400; }
+    #epayco-checkout-host {
+      margin: 24px auto 48px;
+      width: min(1080px, calc(100% - 32px));
+      min-height: 48px;
+    }
+    .p2l-wa {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 40;
+      font-family: Arial, ui-sans-serif, system-ui, sans-serif;
+    }
+    .p2l-wa__fab {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 48px;
+      margin: 0;
+      padding: 0 16px 0 12px;
+      border: 0;
+      border-radius: 999px;
+      background: #25d366;
+      color: #fff;
+      font: 700 15px/1 Arial, ui-sans-serif, system-ui, sans-serif;
+      letter-spacing: -0.01em;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
+      cursor: pointer;
+    }
+    .p2l-wa__fab svg { width: 22px; height: 22px; display: block; flex: 0 0 auto; }
+    .p2l-wa__fab:hover { filter: brightness(1.06); }
+    .p2l-wa.is-open .p2l-wa__fab { display: none; }
+    .p2l-wa.is-off .p2l-wa__fab {
+      background: #c5c1b8;
+      filter: grayscale(1);
+      opacity: 0.72;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+    .p2l-wa__panel {
+      width: min(320px, calc(100vw - 28px));
+      border-radius: 18px;
+      overflow: hidden;
+      background: #eceff1;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.32);
+    }
+    .p2l-wa__panel[hidden] { display: none; }
+    .p2l-wa__head {
+      position: relative;
+      padding: 16px 40px 18px;
+      background: #25d366;
+      color: #fff;
+      text-align: center;
+    }
+    .p2l-wa__logo {
+      width: 58px;
+      height: 58px;
+      margin: 0 auto 10px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #fff;
+      display: block;
+    }
+    .p2l-wa__head p {
+      margin: 0;
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+    .p2l-wa__x {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      width: 28px;
+      height: 28px;
+      border: 0;
+      border-radius: 50%;
+      background: transparent;
+      color: #fff;
+      font-size: 20px;
+      line-height: 1;
+      cursor: pointer;
+    }
+    .p2l-wa__body { padding: 12px; }
+    .p2l-wa__hello {
+      margin: 0 0 10px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: #fff;
+      color: #1f2937;
+      font-size: 14px;
+      line-height: 1.35;
+    }
+    .p2l-wa__form {
+      display: flex;
+      align-items: flex-end;
+      gap: 6px;
+      padding: 8px 8px 8px 12px;
+      border-radius: 16px;
+      background: #fff;
+    }
+    .p2l-wa__form textarea {
+      flex: 1;
+      min-width: 0;
+      min-height: 44px;
+      max-height: 96px;
+      margin: 0;
+      padding: 8px 0;
+      border: 0;
+      resize: none;
+      background: transparent;
+      color: #111827;
+      font: 14px/1.35 Arial, ui-sans-serif, system-ui, sans-serif;
+    }
+    .p2l-wa__form textarea:focus { outline: none; }
+    .p2l-wa__form textarea::placeholder { color: #9ca3af; }
+    .p2l-wa__send {
+      width: 36px;
+      height: 36px;
+      flex: 0 0 auto;
+      display: grid;
+      place-items: center;
+      border: 0;
+      border-radius: 50%;
+      background: transparent;
+      color: #64748b;
+      cursor: pointer;
+    }
+    .p2l-wa__send svg { width: 20px; height: 20px; display: block; }
+    .p2l-wa__send:hover { color: #25d366; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="#top">
+        <span class="brand__name">P2L</span>
+        <span class="brand__product" data-i18n="brand.product">WhatsApp IA Bot Factory</span>
+      </a>
+      <div class="lang-switch" role="group" aria-label="Idioma">
+        <button type="button" data-lang="es" class="is-on" aria-pressed="true">ES</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="wrap hero__content">
+        <div class="hero__brand-row">
+          <p class="hero__brand">P2L</p>
+          <p class="hero__product" data-i18n="brand.product">WhatsApp IA Bot Factory</p>
+        </div>
+        <h1 class="hero__title" data-i18n="hero.title">Crea tu asistente de inteligencia artificial que atiende a través de tu número de WhatsApp 24/7/365 y a la medida de tu negocio</h1>
+        <p class="hero__lead" data-i18n="hero.lead">
+          Respuestas automáticas, IA, pedidos, citas, facturas y escalado a humano — con runbook Meta listo para conectar tu número.
+        </p>
+        <div class="hero__ctas">
+          <a class="btn btn--primary btn--lg" href="#planes" data-i18n="hero.ctaPlans">Ver planes y comprar</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="planes">
+      <div class="wrap">
+        <p class="section__tag">ePayco</p>
+        <h2 class="section__title" data-i18n="plans.title">Planes mensuales de bot IA</h2>
+        <div class="plans-intro">
+          <p data-i18n="plans.intro1">
+            Los planes son mensuales. Compra un plan de bot y obtienes un panel de empresa para skills, flujos y MCP.
+            Según el plan, tú o P2L configuran el número Meta WhatsApp Cloud API. En el plan Agent Lab Starter la cuenta de WhatsApp Business es compartida y está limitada a los topes de conversaciones diarias permitidas en el plan gratuito de WhatsApp. Para los demás planes la cuenta de WhatsApp Business, al ser propia de la empresa, es contratada por el cliente y cuenta con la capacidad propia del plan adquirido por la empresa.
+          </p>
+        </div>
+        <div class="plans" id="plans-root" aria-live="polite">
+          <p class="section__lead" data-i18n="plans.loading">Cargando planes…</p>
+        </div>
+        <div id="epayco-checkout-host" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="conectar">
+      <div class="wrap">
+        <p class="section__tag">WhatsApp</p>
+        <h2 class="section__title" data-i18n="connect.title">Cómo se conecta el número</h2>
+        <p class="section__lead" data-i18n-html="connect.lead">
+          Tu número de WhatsApp Business se conecta a través de Meta (Facebook Developers).
+          Tú creas la app y el número; P2L es el <strong>webhook</strong>: la dirección
+          donde Meta entrega los mensajes para que el bot de tu empresa responda.
+        </p>
+        <ol class="steps">
+          <li data-i18n-html="connect.s1">
+            <strong>Crea tu app en Meta</strong>
+            En <a href="https://developers.facebook.com/apps/" target="_blank" rel="noopener">My Apps</a>
+            crea una app, agrega el producto WhatsApp y vincula el número.
+            Guía:
+            <a href="https://developers.facebook.com/docs/whatsapp/cloud-api/get-started/" target="_blank" rel="noopener">Get started · Cloud API</a>.
+          </li>
+          <li data-i18n-html="connect.s2">
+            <strong>Copia los datos del número</strong>
+            En <em>WhatsApp → API Setup</em> o
+            <a href="https://business.facebook.com/latest/whatsapp_manager/phone_numbers" target="_blank" rel="noopener">WhatsApp Manager</a>:
+            Phone Number ID, WABA ID, App ID, App Secret.
+            Token permanente desde
+            <a href="https://business.facebook.com/settings/system-users" target="_blank" rel="noopener">System Users</a>.
+            Docs números:
+            <a href="https://developers.facebook.com/docs/whatsapp/cloud-api/phone-numbers/" target="_blank" rel="noopener">Business phone numbers</a>.
+          </li>
+          <li data-i18n-html="connect.s3">
+            <strong>Pégalos en tu panel P2L</strong>
+            En el dashboard de empresa (o P2L si tu plan lo incluye) guardas esos datos de forma segura.
+          </li>
+          <li data-i18n-html="connect.s4">
+            <strong>Activa el webhook de P2L</strong>
+            En Meta: <em>WhatsApp → Configuration</em>
+            (<a href="https://developers.facebook.com/docs/whatsapp/cloud-api/guides/set-up-webhooks/" target="_blank" rel="noopener">Set up webhooks</a>).
+            Pegas la URL de webhook de P2L y el Verify Token. Ahí Meta enviará cada mensaje entrante.
+          </li>
+        </ol>
+        <p class="section__lead" style="margin-top:20px;margin-bottom:12px" data-i18n-html="connect.links">
+          Enlaces rápidos:
+          <a href="https://developers.facebook.com/docs/whatsapp/cloud-api/get-started/" target="_blank" rel="noopener">Get started</a>
+          ·
+          <a href="https://developers.facebook.com/apps/" target="_blank" rel="noopener">My Apps</a>
+          ·
+          <a href="https://business.facebook.com/" target="_blank" rel="noopener">Business Suite</a>
+          ·
+          <a href="https://business.facebook.com/settings/system-users" target="_blank" rel="noopener">System Users</a>
+          ·
+          <a href="https://developers.facebook.com/docs/whatsapp/cloud-api/guides/set-up-webhooks/" target="_blank" rel="noopener">Webhooks</a>
+        </p>
+        <p class="section__lead" style="margin-top:0;margin-bottom:12px" data-i18n-html="connect.pricing">
+          <strong style="color:var(--ink)">Precios Meta WhatsApp (oficial):</strong>
+          consulta el rate card por país y categoría (marketing, utility, auth, servicio) en
+          <a href="https://developers.facebook.com/docs/whatsapp/pricing" target="_blank" rel="noopener">developers.facebook.com/docs/whatsapp/pricing</a>
+          ·
+          <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing" target="_blank" rel="noopener">Business Messaging · Pricing</a>
+          · actualizaciones
+          <a href="https://developers.facebook.com/docs/whatsapp/pricing/updates-to-pricing/" target="_blank" rel="noopener">Updates to pricing</a>
+          (incluye COP y cambios oct&nbsp;2026).
+        </p>
+        <p class="section__lead" style="margin-top:0;margin-bottom:0" data-i18n-html="connect.what">
+          <strong style="color:var(--ink)">¿Qué es P2L en este flujo?</strong>
+          No es tu número de WhatsApp. Es el servidor que recibe los mensajes (webhook) y ejecuta el
+          agente IA de tu empresa (skills, flujos, MCP) para contestar. Tú decides el contenido;
+          Meta lleva el mensaje; P2L lo procesa.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="negocio">
+      <div class="wrap">
+        <p class="section__tag" data-i18n="biz.tag">Empresa</p>
+        <h2 class="section__title" data-i18n="biz.title">Skill · LSP · MCP del negocio</h2>
+        <p class="section__lead" data-i18n-html="biz.lead">
+          Son el <strong>contexto que tu empresa provee</strong> para que la IA responda con tu operación
+          (no con respuestas genéricas).
+        </p>
+        <div class="pillars">
+          <div class="pillar">
+            <h3>Skills</h3>
+            <p data-i18n="biz.skills">
+              El “saber” del bot: menú, precios, FAQs, políticas y tonos en markdown.
+              Es lo que la IA lee para contestar como tu marca.
+            </p>
+          </div>
+          <div class="pillar">
+            <h3>LSP</h3>
+            <p data-i18n="biz.lsp">
+              Language Server Protocol de conversación: valida el flujo (slots faltantes, intents rotos)
+              para que el bot no improvise pasos incompletos al atender al cliente.
+            </p>
+          </div>
+          <div class="pillar">
+            <h3>MCP</h3>
+            <p data-i18n="biz.mcp">
+              Model Context Protocol: conecta datos vivos (pedidos, citas, facturas, CRM, BD)
+              para que las respuestas usen información real de tu negocio, no solo texto fijo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <span>© P2L</span>
+      <span class="site-footer__links">
+        <a href="privacidad.html" data-i18n="footer.privacy">Política de privacidad</a>
+        <span aria-hidden="true">·</span>
+        <a href="terminos.html" data-i18n="footer.terms">Condiciones del servicio</a>
+        <span aria-hidden="true">·</span>
+        <a href="mailto:techguard_whatsappbot@gmail.com" data-i18n="footer.contact">Contacto P2L</a>
+      </span>
+      <span class="site-footer__nitro">Powered by Nitro <span class="site-footer__bolt" aria-hidden="true">⚡</span>Cluster</span>
+    </div>
+  </footer>
+
+  <div class="p2l-wa is-off" id="p2l-wa" data-company-id="6a9f34838abf5e593a4d40fc">
+    <button type="button" class="p2l-wa__fab" id="p2l-wa-fab" aria-expanded="false" aria-controls="p2l-wa-panel">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+        <path d="M20.5 3.5A11 11 0 0 0 2.1 17.8L1 23l5.3-1.1A11 11 0 0 0 20.5 3.5zm-8.5 17a9.1 9.1 0 0 1-4.6-1.3l-.3-.2-3.2.7.7-3.1-.2-.3A9.1 9.1 0 1 1 12 20.5zm5-6.8c-.3-.1-1.6-.8-1.8-.9s-.4-.1-.6.1-.7.9-.8 1-.3.2-.6.1a7.4 7.4 0 0 1-2.2-1.4 8.2 8.2 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5.2-.3a.5.5 0 0 0 0-.5c0-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4.1 15 15 0 0 0 1.5.6 3.6 3.6 0 0 0 1.7.1 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3z"/>
+      </svg>
+      <span id="i-wa-fab" data-i18n="wa.fab">¿Cómo podemos ayudarte?</span>
+    </button>
+    <section class="p2l-wa__panel" id="p2l-wa-panel" hidden data-i18n-aria="wa.panel" data-aria-es="Soporte por WhatsApp" aria-label="Soporte por WhatsApp">
+      <header class="p2l-wa__head">
+        <button type="button" class="p2l-wa__x" id="p2l-wa-close" data-i18n-aria="wa.close" data-aria-es="Cerrar" aria-label="Cerrar">×</button>
+        <img class="p2l-wa__logo" src="assets/logo-p2l.png" alt="P2L" />
+        <p id="i-wa-head" data-i18n="wa.head">Soporte disponible 24/7 en WhatsApp. ¡Contáctanos!</p>
+      </header>
+      <div class="p2l-wa__body">
+        <p class="p2l-wa__hello" id="i-wa-hello" data-i18n="wa.hello">👋 Hola, será un placer atenderte</p>
+        <form class="p2l-wa__form" id="p2l-wa-form">
+          <textarea id="p2l-wa-text" rows="2" maxlength="1000" data-i18n-placeholder="wa.placeholder" data-placeholder-es="Describe con detalle tu consulta" placeholder="Describe con detalle tu consulta"></textarea>
+          <button type="submit" class="p2l-wa__send" id="i-wa-send" data-i18n-aria="wa.send" data-aria-es="Enviar por WhatsApp" aria-label="Enviar por WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M3.2 11.3 20.4 3.1c.8-.4 1.6.4 1.3 1.2l-4.2 14.8c-.3.9-1.4 1.1-2 .4l-3.6-3.7-2.2 2.1c-.5.5-1.4.1-1.4-.6v-3.3L3.4 12.6c-.8-.3-.8-1.4-.2-1.3z"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <script>
+(function () {
+  // En producción Nginx proxea /p2l-tenant/api/* → Node. /api/* en raíz da 404 sin CORS → NetworkError en fetch.
+  var API = 'https://www.refactorii.com/p2l-tenant/api/p2l-techguard-whatsapp-bot';
+  var lang = 'es';
+  var lastPlans = null;
+  var I18N = {
+    es: {
+      'price.free': 'Gratis',
+      'price.agreed': 'A convenir',
+      'price.contact': 'Contáctanos',
+      'price.month': ' / mes',
+      'meta.skills': 'skills',
+      'meta.mcp': 'MCP',
+      'meta.msgs': 'msgs/mes',
+      'meta.days': 'días',
+      'cta.trial': 'Ingresar a la prueba gratuita',
+      'cta.buy': 'Comprar con ePayco',
+      'cta.whatsapp': 'Contactar en WhatsApp',
+      'label.company': 'Nombre empresa',
+      'label.email': 'Email (Gmail del admin del panel)',
+      'ph.company': 'Nombre de la empresa',
+      'ph.email': 'tu@gmail.com',
+      'wa.p2l': 'Meta: P2L',
+      'wa.hybrid': 'Meta: híbrido',
+      'wa.customer': 'Meta: tú conectas',
+      'enterprise': 'Tu empresa aporta el contexto (skills + MCP), el LLM usa ese contexto para responder, P2L orquesta el webhook y tu agente Whatsapp',
+      'cap.github': 'Github | Repo panel de empresa',
+      'cap.groq': 'Inferencia IA | Agente',
+      'cap.dropbox': 'Dropbox | Almacenamiento de imagenes',
+      'cap.whatsapp': 'Whatsapp | META Business Account',
+      'cap.atlas': 'Base de datos | Almacenamiento Conversaciones Agente',
+      'cap.geoapify': 'Geoapify | Georreferenciación API',
+      'cap.plans': 'Panel de empresa',
+      'cap.skill': 'Skill del agente IA (Asistente de Whatsapp)',
+      'cap.capabilities': 'Capacidades del agente IA (Asistente de Whatsapp)',
+      'cap.chat': 'Conversaciones en Whatsapp',
+      'cap.mobility': 'Movilidad',
+      'cap.cad': 'CAD alert panel',
+      'cap.devopsChat': 'Soporte Devops P2L Chat',
+      'cap.landing': 'Landing',
+      'cap.off': 'No incluida en este plan',
+      'status.need': 'Indica nombre de empresa y email (Gmail del panel).',
+      'status.gmail': 'El correo debe ser de Gmail (@gmail.com).',
+      'status.preparing': 'Preparando…',
+      'status.creating': 'Creando tu empresa de prueba…',
+      'status.hadTrial': 'Ya tenías una prueba. ',
+      'status.created': 'Empresa creada. ',
+      'status.entering': 'Entrando al panel de tu empresa…',
+      'status.checkout': 'Preparando checkout ePayco…',
+      'status.trialReady': 'Empresa de prueba lista. Entrando al panel…',
+      'status.opening': 'Abriendo ePayco…',
+      'status.opened': 'Completa el pago en la ventana de ePayco.',
+      'status.epaycoLoad': 'No se pudo abrir ePayco. Recarga la página e inténtalo de nuevo.',
+      'status.noAttrs': 'Sin atributos ePayco',
+      'status.trialError': 'Error al crear la prueba',
+      'status.freeError': 'Error checkout gratis',
+      'meta.title': 'P2L — WhatsApp IA Bot Factory',
+      'meta.description': 'Bot WhatsApp a la medida: respuestas automáticas, IA/LLM, menús, pedidos, citas, facturas, escalado a humano, notificaciones y registro de conversaciones.'
+    },
+    en: {
+      'brand.product': 'WhatsApp AI Bot Factory',
+      'hero.title': 'Create the artificial intelligence assistant that serves customers through your WhatsApp number 24/7/365, tailored to your business',
+      'wa.fab': 'How can we help you?',
+      'wa.panel': 'WhatsApp support',
+      'wa.close': 'Close',
+      'wa.head': 'Support available 24/7 on WhatsApp. Contact us!',
+      'wa.hello': '👋 Hi, it will be a pleasure to help you',
+      'wa.placeholder': 'Describe your question in detail',
+      'wa.send': 'Send via WhatsApp',
+      'hero.lead': 'Automatic replies, AI, orders, appointments, invoices and handoff to a human — with a Meta runbook ready to connect your number.',
+      'hero.ctaPlans': 'See plans and buy',
+      'plans.title': 'Monthly AI bot plans',
+      'plans.intro1': 'Plans are billed monthly. Buy a bot plan and you get a company panel for skills, flows and MCP. Depending on the plan, you or P2L set up the Meta WhatsApp Cloud API number. On the Agent Lab Starter plan the WhatsApp Business account is shared and limited to the daily conversation caps allowed on the free WhatsApp plan. On the other plans the WhatsApp Business account belongs to the company: the client contracts it and it has the capacity of the plan the company bought.',
+      'plans.loading': 'Loading plans…',
+      'connect.title': 'How the number is connected',
+      'connect.lead': 'Your WhatsApp Business number connects through Meta (Facebook Developers). You create the app and the number; P2L is the <strong>webhook</strong>: the address where Meta delivers messages so your company bot can reply.',
+      'connect.s1': '<strong>Create your app in Meta</strong> In <a href="https://developers.facebook.com/apps/" target="_blank" rel="noopener">My Apps</a> create an app, add the WhatsApp product and link the number. Guide: <a href="https://developers.facebook.com/docs/whatsapp/cloud-api/get-started/" target="_blank" rel="noopener">Get started · Cloud API</a>.',
+      'connect.s2': '<strong>Copy the number details</strong> In <em>WhatsApp → API Setup</em> or <a href="https://business.facebook.com/latest/whatsapp_manager/phone_numbers" target="_blank" rel="noopener">WhatsApp Manager</a>: Phone Number ID, WABA ID, App ID, App Secret. Permanent token from <a href="https://business.facebook.com/settings/system-users" target="_blank" rel="noopener">System Users</a>. Number docs: <a href="https://developers.facebook.com/docs/whatsapp/cloud-api/phone-numbers/" target="_blank" rel="noopener">Business phone numbers</a>.',
+      'connect.s3': '<strong>Paste them in your P2L panel</strong> In the company dashboard (or P2L, if your plan includes it) you store those details securely.',
+      'connect.s4': '<strong>Turn on the P2L webhook</strong> In Meta: <em>WhatsApp → Configuration</em> (<a href="https://developers.facebook.com/docs/whatsapp/cloud-api/guides/set-up-webhooks/" target="_blank" rel="noopener">Set up webhooks</a>). Paste the P2L webhook URL and the Verify Token. That is where Meta sends every incoming message.',
+      'connect.links': 'Quick links: <a href="https://developers.facebook.com/docs/whatsapp/cloud-api/get-started/" target="_blank" rel="noopener">Get started</a> · <a href="https://developers.facebook.com/apps/" target="_blank" rel="noopener">My Apps</a> · <a href="https://business.facebook.com/" target="_blank" rel="noopener">Business Suite</a> · <a href="https://business.facebook.com/settings/system-users" target="_blank" rel="noopener">System Users</a> · <a href="https://developers.facebook.com/docs/whatsapp/cloud-api/guides/set-up-webhooks/" target="_blank" rel="noopener">Webhooks</a>',
+      'connect.pricing': '<strong style="color:var(--ink)">Official Meta WhatsApp pricing:</strong> check the rate card by country and category (marketing, utility, auth, service) at <a href="https://developers.facebook.com/docs/whatsapp/pricing" target="_blank" rel="noopener">developers.facebook.com/docs/whatsapp/pricing</a> · <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing" target="_blank" rel="noopener">Business Messaging · Pricing</a> · updates <a href="https://developers.facebook.com/docs/whatsapp/pricing/updates-to-pricing/" target="_blank" rel="noopener">Updates to pricing</a> (includes COP and Oct 2026 changes).',
+      'connect.what': '<strong style="color:var(--ink)">What is P2L in this flow?</strong> It is not your WhatsApp number. It is the server that receives the messages (webhook) and runs your company AI agent (skills, flows, MCP) to reply. You decide the content; Meta carries the message; P2L processes it.',
+      'biz.tag': 'Company',
+      'biz.title': 'Business skill · LSP · MCP',
+      'biz.lead': 'They are the <strong>context your company provides</strong> so the AI answers with your operation (not with generic replies).',
+      'biz.skills': 'The bot’s know-how: menu, prices, FAQs, policies and tone in markdown. This is what the AI reads to answer as your brand.',
+      'biz.lsp': 'Conversation Language Server Protocol: it checks the flow (missing slots, broken intents) so the bot does not invent incomplete steps when serving a customer.',
+      'biz.mcp': 'Model Context Protocol: it connects live data (orders, appointments, invoices, CRM, database) so replies use real business information, not only fixed text.',
+      'footer.privacy': 'Privacy policy',
+      'footer.terms': 'Terms of service',
+      'footer.contact': 'Contact P2L',
+      'price.free': 'Free',
+      'price.agreed': 'To be agreed',
+      'price.contact': 'Contact us',
+      'price.month': ' / mo',
+      'meta.skills': 'skills',
+      'meta.mcp': 'MCP',
+      'meta.msgs': 'msgs/mo',
+      'meta.days': 'days',
+      'cta.trial': 'Start the free trial',
+      'cta.buy': 'Buy with ePayco',
+      'cta.whatsapp': 'Contact on WhatsApp',
+      'label.company': 'Company name',
+      'label.email': 'Email (panel admin Gmail)',
+      'ph.company': 'Company name',
+      'ph.email': 'you@gmail.com',
+      'wa.p2l': 'Meta: P2L',
+      'wa.hybrid': 'Meta: hybrid',
+      'wa.customer': 'Meta: you connect',
+      'enterprise': 'Your company provides the context (skills + MCP), the LLM uses that context to reply, P2L orchestrates the webhook and your WhatsApp agent',
+      'cap.github': 'Github | Company panel repo',
+      'cap.groq': 'AI inference | Agent',
+      'cap.dropbox': 'Dropbox | Image storage',
+      'cap.whatsapp': 'WhatsApp | META Business Account',
+      'cap.atlas': 'Database | Agent conversation storage',
+      'cap.geoapify': 'Geoapify | Georeferencing API',
+      'cap.plans': 'Company panel',
+      'cap.skill': 'AI agent skill (WhatsApp assistant)',
+      'cap.capabilities': 'AI agent capabilities (WhatsApp assistant)',
+      'cap.chat': 'WhatsApp conversations',
+      'cap.mobility': 'Mobility',
+      'cap.cad': 'CAD alert panel',
+      'cap.devopsChat': 'P2L Devops support chat',
+      'cap.landing': 'Landing',
+      'cap.off': 'Not included in this plan',
+      'status.need': 'Enter the company name and email (panel Gmail).',
+      'status.gmail': 'The email must be a Gmail address (@gmail.com).',
+      'status.preparing': 'Preparing…',
+      'status.creating': 'Creating your trial company…',
+      'status.hadTrial': 'You already had a trial. ',
+      'status.created': 'Company created. ',
+      'status.entering': 'Opening your company panel…',
+      'status.checkout': 'Preparing ePayco checkout…',
+      'status.trialReady': 'Trial company ready. Opening the panel…',
+      'status.opening': 'Opening ePayco…',
+      'status.opened': 'Complete the payment in the ePayco window.',
+      'status.epaycoLoad': 'ePayco could not be opened. Reload the page and try again.',
+      'status.noAttrs': 'Missing ePayco attributes',
+      'status.trialError': 'Could not create the trial',
+      'status.freeError': 'Free checkout error',
+      'meta.title': 'P2L — WhatsApp AI Bot Factory',
+      'meta.description': 'A WhatsApp bot built to measure: automatic replies, AI/LLM, menus, orders, appointments, invoices, human handoff, notifications and conversation logs.'
+    }
+  };
+  var COPY_EN = {
+    'Prueba gratuita del bot IA: crea tu empresa y entra al panel al instante.': 'Free AI bot trial: create your company and open the panel right away.',
+    '5 skills, 5 LSP y 5 MCP programados por P2L. Tú compartes el contexto de tu empresa.': '5 skills, 5 LSP and 5 MCP set up by P2L. You share your company context.',
+    'P2L programa skills, LSP y MCP. Tú compartes el contexto de tu empresa.': 'P2L sets up skills, LSP and MCP. You share your company context.',
+    '20 skills, 20 LSP y 20 MCP programados por ti en el dashboard de empresa.': '20 skills, 20 LSP and 20 MCP that you set up in the company dashboard.',
+    'Configuras skills, LSP y MCP tú mismo en el dashboard de empresa.': 'You set up skills, LSP and MCP yourself in the company dashboard.',
+    '50 skills, 50 LSP y 50 MCP. Escala operativa con Meta operado por P2L.': '50 skills, 50 LSP and 50 MCP. Operational scale with Meta run by P2L.',
+    'Escala operativa con Meta/WABA operado por P2L.': 'Operational scale with Meta/WABA run by P2L.',
+    'Desarrollo del bot a la medida: LLM, LSP, MCP, skills y orquestador de tu operación.': 'A bot built to measure: LLM, LSP, MCP, skills and the orchestrator of your operation.',
+    'Desarrollo del bot a la medida: LLM, LSP, MCP, skills y orquestador de tu operación. Contáctanos por WhatsApp.': 'A bot built to measure: LLM, LSP, MCP, skills and the orchestrator of your operation. Contact us on WhatsApp.',
+    'Panel empresa + runbook Meta': 'Company panel + Meta runbook',
+    'Webhook P2L': 'P2L webhook',
+    'Programados por P2L': 'Set up by P2L',
+    'Tú compartes el contexto de tu empresa': 'You share your company context',
+    'Programados por ti en el dashboard de empresa': 'Set up by you in the company dashboard',
+    'Meta/WABA operado por P2L': 'Meta/WABA operated by P2L',
+    '3 skills de bot IA': '3 AI bot skills'
+  };
+  function t(key) {
+    var pack = I18N[lang] || I18N.es;
+    if (pack && pack[key] != null) return pack[key];
+    if (I18N.es && I18N.es[key] != null) return I18N.es[key];
+    return key;
+  }
+  function trCopy(s) {
+    var raw = String(s == null ? '' : s).replace(/techguard/gi, 'P2L').trim();
+    if (lang !== 'en') return raw;
+    return COPY_EN[raw] || raw;
+  }
+  function snapshotI18n() {
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      if (!el.hasAttribute('data-i18n-es')) el.setAttribute('data-i18n-es', el.textContent);
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+      if (!el.hasAttribute('data-i18n-es')) el.setAttribute('data-i18n-es', el.innerHTML);
+    });
+  }
+  function applyLang() {
+    document.documentElement.lang = lang === 'en' ? 'en' : 'es';
+    document.title = t('meta.title');
+    var desc = document.querySelector('meta[name="description"]');
+    if (desc) desc.setAttribute('content', t('meta.description'));
+    var switcher = document.querySelector('.lang-switch');
+    if (switcher) switcher.setAttribute('aria-label', lang === 'en' ? 'Language' : 'Idioma');
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n');
+      el.textContent = lang === 'en' ? t(key) : el.getAttribute('data-i18n-es');
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-html');
+      el.innerHTML = lang === 'en' ? t(key) : el.getAttribute('data-i18n-es');
+    });
+    document.querySelectorAll('.lang-switch button').forEach(function (btn) {
+      var on = btn.getAttribute('data-lang') === lang;
+      btn.classList.toggle('is-on', on);
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-placeholder');
+      el.placeholder = lang === 'en' ? t(key) : el.getAttribute('data-placeholder-es');
+    });
+    document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-aria');
+      el.setAttribute('aria-label', lang === 'en' ? t(key) : el.getAttribute('data-aria-es'));
+    });
+    if (lastPlans) renderPlans(lastPlans);
+  }
+  var FALLBACK_PLANS = [
+    {
+      id: 0, name: 'Trial', priceCop: 0, messagesPerMonth: 300,
+      maxSkills: 3, maxLsp: 3, maxMcp: 3, days: 15, waOwnership: 'customer', contactOnly: false,
+      description: 'Prueba gratuita del bot IA: crea tu empresa y entra al panel al instante.',
+      features: ['Panel empresa + runbook Meta', 'Webhook P2L'],
+      public: true
+    },
+    {
+      id: 1, name: 'Starter Bot', priceCop: 99000, messagesPerMonth: 4000,
+      maxSkills: 5, maxLsp: 5, maxMcp: 5, days: 30, waOwnership: 'techguard', contactOnly: false,
+      description: 'P2L programa skills, LSP y MCP. Tú compartes el contexto de tu empresa.',
+      features: ['Programados por P2L', 'Tú compartes el contexto de tu empresa'],
+      public: true
+    },
+    {
+      id: 2, name: 'Growth Bot', priceCop: 299000, messagesPerMonth: 15000,
+      maxSkills: 20, maxLsp: 20, maxMcp: 20, days: 30, waOwnership: 'hybrid', contactOnly: false,
+      description: 'Configuras skills, LSP y MCP tú mismo en el dashboard de empresa.',
+      features: ['Programados por ti en el dashboard de empresa'],
+      public: true
+    },
+    {
+      id: 3, name: 'Business Bot', priceCop: 799000, messagesPerMonth: 45000,
+      maxSkills: 50, maxLsp: 50, maxMcp: 50, days: 30, waOwnership: 'techguard', contactOnly: false,
+      description: 'Escala operativa con Meta/WABA operado por P2L.',
+      features: ['Meta/WABA operado por P2L'],
+      public: true
+    },
+    {
+      id: 4, name: 'Enterprise', priceCop: 0, messagesPerMonth: 0,
+      maxSkills: 0, maxLsp: 0, maxMcp: 0, days: 30, waOwnership: 'techguard', contactOnly: true,
+      whatsappUrl: 'https://wa.me/573000000000?text=' + encodeURIComponent('Hola P2L, quiero el plan Enterprise — bot WhatsApp a la medida'),
+      description: 'Desarrollo del bot a la medida: LLM, LSP, MCP, skills y orquestador de tu operación.',
+      features: [],
+      public: true
+    }
+  ];
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/techguard/gi, 'P2L')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function enterprisePriceOpen(p) {
+    if (!p || typeof p !== 'object') return false;
+    var code = String(p.code || '').trim().toLowerCase();
+    var name = String(p.name || '').trim().toLowerCase();
+    if (code !== 'enterprise' && name !== 'enterprise' && Number(p.id) !== 4) return false;
+    if (p.priceCop === '' || p.priceCop == null) return true;
+    var n = Number(p.priceCop);
+    return !isFinite(n) || n <= 0;
+  }
+
+  function formatPrice(p) {
+    if (enterprisePriceOpen(p)) return t('price.agreed');
+    if (p && p.contactOnly) return t('price.contact');
+    var n = Number(p && p.priceCop != null ? p.priceCop : p) || 0;
+    if (n === 0) return t('price.free');
+    return '$' + n.toLocaleString(lang === 'en' ? 'en-US' : 'es-CO') + ' COP' + t('price.month');
+  }
+
+  function waLabel(w) {
+    if (w === 'techguard') return t('wa.p2l');
+    if (w === 'hybrid') return t('wa.hybrid');
+    return t('wa.customer');
+  }
+
+  /** Quita bullets que repiten lo ya dicho en desc/meta (skills/LSP/MCP/msgs). */
+  function cleanFeatures(p) {
+    var desc = String(p.description || '').toLowerCase();
+    var list = Array.isArray(p.features) ? p.features.slice() : [];
+    if (!list.length && !p.contactOnly) {
+      return [];
+    }
+    var seen = {};
+    return list.filter(function (f) {
+      var raw = String(f).trim();
+      var k = raw.toLowerCase();
+      if (!k || seen[k]) return false;
+      seen[k] = true;
+      // "20 skills" / "20 LSP" / "20 MCP"
+      if (/^\d+([.\s]\d+)?\s*(skills?|lsp|mcp)\b/i.test(raw)) return false;
+      // "15.000 mensajes/mes..."
+      if (/mensajes?/i.test(raw) && /mes|cupo|d[ií]as/i.test(raw)) return false;
+      // "3 skills de bot IA" style already covered by counts in meta
+      if (/^\d+.*\b(skills?|lsp|mcp)\b/i.test(raw) && raw.length < 40) return false;
+      // "LLM · LSP · MCP · skills" si la desc ya habla de eso
+      if (/llm/i.test(raw) && /lsp/i.test(raw) && /mcp/i.test(raw) && /skill/i.test(desc)) return false;
+      if (/desarrollo del bot a la medida/i.test(raw) && /a la medida/i.test(desc)) return false;
+      if (/orquestador de tu operaci[oó]n/i.test(raw) && /orquestador/i.test(desc)) return false;
+      return true;
+    });
+  }
+
+  var PLAN_CAPS = [
+    { id: 'github', cafe: false, label: 'Github | Repo panel de empresa', logo: '<svg viewBox="0 0 16 16"><path fill="#181717" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>' },
+    { id: 'groq', cafe: false, label: 'Inferencia IA | Agente', logo: '<svg viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#F55036"/><path fill="#fff" d="M7.2 16.4 12 5.6l4.8 10.8h-2.1l-.9-2.1H10.2l-.9 2.1H7.2zm4.8-9.1-1.6 3.8h3.2L12 7.3z"/></svg>' },
+    { id: 'dropbox', cafe: false, label: 'Dropbox | Almacenamiento de imagenes', logo: '<svg viewBox="0 0 24 24"><path fill="#0061FF" d="M6 1.5 12 5.4 6 9.3 0 5.4 6 1.5zm12 0 6 3.9-6 3.9-6-3.9 6-3.9zM0 13.2 6 9.3l6 3.9L6 17.1 0 13.2zm18-3.9 6 3.9L18 17.1l-6-3.9 6-3.9zM6 18.4l6-3.9 6 3.9-6 3.9-6-3.9z"/></svg>' },
+    { id: 'whatsapp', cafe: false, label: 'Whatsapp | META Business Account', logo: '<svg viewBox="0 0 24 24"><path fill="#25D366" d="M12.04 2C6.58 2 2.15 6.4 2.15 11.83c0 1.74.46 3.44 1.34 4.94L2 22l5.39-1.41a10.1 10.1 0 0 0 4.65 1.18h.01c5.46 0 9.89-4.4 9.89-9.83C21.94 6.4 17.5 2 12.04 2zm5.76 13.86c-.24.68-1.4 1.25-1.94 1.33-.5.07-1.12.1-1.81-.11-.41-.13-.94-.31-1.62-.6-2.85-1.23-4.71-4.1-4.85-4.29-.14-.19-1.15-1.53-1.15-2.92 0-1.39.73-2.07 1-2.36.24-.26.64-.38 1.02-.38.12 0 .23 0 .33.01.3.01.45.03.65.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.16-.29.36-.41.48-.14.14-.28.28-.12.55.16.26.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.28.14.44.12.6-.07.16-.19.69-.8.87-1.08.19-.26.37-.22.62-.13.26.1 1.62.76 1.9.9.28.14.46.21.53.33.07.12.07.68-.17 1.36z"/></svg>' },
+    { id: 'atlas', cafe: false, label: 'Base de datos | Almacenamiento Conversaciones Agente', logo: '<svg viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#001E2B"/><path fill="#00ED64" d="M12.2 3.2c.6 2.2-.2 3.6-1.4 5.1 2.4.2 4.8-.4 7.2-2.2-.4 5.2-.2 9.6-2.8 12.8-1.7 2.2-4 3.2-6.4 2.8.1-2.1.6-5 2.3-8.6-1.7 2.7-2.6 5.2-2.9 7.5-2.3-.4-3.8-2.2-3.8-4.8 0-4.4 2.4-8.4 6.6-11.8.4-.3.8-.6 1.2-.8z"/></svg>' },
+    { id: 'geoapify', cafe: false, label: 'Geoapify | Georreferenciación API', logo: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#0B6E4F"/><path fill="#fff" d="M12 4.6c-3.1 0-5.4 2.3-5.4 5.3 0 4 5.4 9.5 5.4 9.5s5.4-5.5 5.4-9.5c0-3-2.3-5.3-5.4-5.3zm0 7.2a1.9 1.9 0 1 1 0-3.8 1.9 1.9 0 0 1 0 3.8z"/></svg>' },
+    { id: 'plans', cafe: true, label: 'Panel de empresa', logo: '<img src="assets/p2l-mark.svg" alt="" />' },
+    { id: 'skill', cafe: true, label: 'Skill del agente IA (Asistente de Whatsapp)', logo: '<img src="assets/p2l-mark.svg" alt="" />' },
+    { id: 'capabilities', cafe: true, label: 'Capacidades del agente IA (Asistente de Whatsapp)', logo: '<img src="assets/p2l-mark.svg" alt="" />' },
+    { id: 'chat', cafe: true, label: 'Conversaciones en Whatsapp', logo: '<img src="assets/p2l-mark.svg" alt="" />' },
+    { id: 'mobility', cafe: true, label: 'Movilidad', logo: '<img src="assets/p2l-mark.svg" alt="" />' },
+    { id: 'cad', cafe: true, label: 'CAD alert panel', logo: '<img src="assets/p2l-mark.svg" alt="" />' },
+    { id: 'devopsChat', cafe: true, label: 'Soporte Devops P2L Chat', logo: '<img src="assets/p2l-mark.svg" alt="" />' },
+    { id: 'landing', cafe: true, label: 'Landing', logo: '<img src="assets/p2l-mark.svg" alt="" />' }
+  ];
+
+  function clusterLoginHref() {
+    return 'https://www.refactorii.com/p2l-tenant/login/p2l-cluster-whatsapp-bot/' + (lang === 'en' ? 'en' : 'es');
+  }
+
+  function capsHtml(p) {
+    var flags = p && p.agentCapabilities;
+    return '<ul class="plan-caps">' + PLAN_CAPS.map(function (cap) {
+      var on = cap.id === 'devopsChat' ? false : true;
+      if (flags && typeof flags === 'object' && typeof flags[cap.id] === 'boolean') on = flags[cap.id];
+      return '<li class="' + (cap.cafe ? 'is-cafe' : 'is-white') + (on ? '' : ' is-off') + '"' +
+        (on ? '' : ' title="' + esc(t('cap.off')) + '"') + '>' +
+        '<span class="plan-caps__logo">' + cap.logo + '</span>' +
+        '<span>' + esc(t('cap.' + cap.id)) + '</span></li>';
+    }).join('') + '</ul>';
+  }
+
+  function featuresHtml(p) {
+    var list = cleanFeatures(p);
+    if (!list.length) return '';
+    return '<ul class="features">' + list.map(function (f) {
+      return '<li>' + esc(trCopy(f)) + '</li>';
+    }).join('') + '</ul>';
+  }
+
+  function renderPlans(plans) {
+    var root = document.getElementById('plans-root');
+    if (!root) return;
+    root.innerHTML = plans.map(function (p) {
+      var id = p.id;
+      var contactOnly = !!p.contactOnly;
+      var agreed = enterprisePriceOpen(p);
+      var isFree = !contactOnly && !agreed && Number(p.priceCop) === 0;
+      var descRaw = String(p.description || '').trim();
+      var showDesc = descRaw && descRaw.toLowerCase() !== String(p.name || '').trim().toLowerCase();
+      var feats = contactOnly ? '' : featuresHtml(p);
+      var ctaBlock;
+      if (contactOnly) {
+        return (
+          '<article class="plan plan--enterprise" data-plan-id="' + esc(id) + '">' +
+            (agreed ? '<p class="price">' + esc(t('price.agreed')) + '</p>' : '') +
+            '<p class="plan-enterprise-line">' + esc(t('enterprise')) + '</p>' +
+          '</article>'
+        );
+      }
+      var cta = agreed ? t('price.agreed') : (isFree ? t('cta.trial') : t('cta.buy'));
+      if (agreed) {
+        ctaBlock =
+          '<a class="btn btn--primary btn--wa js-enterprise-wa" href="#" target="_blank" rel="noopener noreferrer">' +
+            esc(t('cta.whatsapp')) +
+          '</a>';
+      } else {
+        ctaBlock =
+          '<div>' +
+            '<label>' + esc(t('label.company')) + '</label>' +
+            '<input type="text" class="js-company" placeholder="' + esc(t('ph.company')) + '" autocomplete="organization" />' +
+            '<label>' + esc(t('label.email')) + '</label>' +
+            '<input type="email" class="js-email" placeholder="' + esc(t('ph.email')) + '" autocomplete="email" inputmode="email" pattern="[^\\s@]+@gmail\\.com" title="' + esc(t('status.gmail')) + '" />' +
+          '</div>' +
+          '<button type="button" class="btn btn--primary js-buy" data-plan-id="' + esc(id) + '">' + esc(cta) + '</button>' +
+          '<p class="plan-status js-status" role="status"></p>';
+      }
+      return (
+        '<article class="plan" data-plan-id="' + esc(id) + '">' +
+          '<h3>' + esc(p.name) + '</h3>' +
+          '<p class="price">' + esc(formatPrice(p)) + '</p>' +
+          (showDesc ? '<p class="desc">' + esc(trCopy(descRaw)) + '</p>' : '') +
+          feats +
+          ctaBlock +
+        '</article>'
+      );
+    }).join('');
+
+    root.querySelectorAll('.js-buy').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var card = btn.closest('.plan');
+        var planId = Number(btn.getAttribute('data-plan-id'));
+        var companyName = (card.querySelector('.js-company') || {}).value || '';
+        var buyerEmail = (card.querySelector('.js-email') || {}).value || '';
+        var statusEl = card.querySelector('.js-status');
+        buyPlan(planId, companyName.trim(), buyerEmail.trim(), btn, statusEl, plans);
+      });
+    });
+    root.querySelectorAll('.js-enterprise-wa').forEach(function (a) {
+      var floatEl = document.getElementById('p2l-wa');
+      var href = floatEl ? floatEl.getAttribute('data-wa-link') : '';
+      var ready = floatEl && !floatEl.classList.contains('is-off') && href;
+      a.setAttribute('href', ready ? href : '#');
+      a.addEventListener('click', function (ev) {
+        if (!a.getAttribute('href') || a.getAttribute('href') === '#') ev.preventDefault();
+      });
+    });
+  }
+
+  function goToCompanyLogin(loginUrl, panelUrl) {
+    var login = 'https://www.refactorii.com/p2l-tenant/login/p2l-cluster-whatsapp-bot';
+    var ownPanel =
+      panelUrl &&
+      panelUrl.indexOf('github.io') !== -1 &&
+      panelUrl.indexOf('techguard-whatsapp-bot-landing') === -1 &&
+      panelUrl.indexOf('planes-landing') === -1;
+    if (ownPanel) {
+      window.location.href = panelUrl;
+      return;
+    }
+    if (loginUrl && loginUrl.indexOf('refactorii.com/p2l-tenant/login/') !== -1 && loginUrl.indexOf('/company/') === -1) {
+      window.location.href = loginUrl.split('?')[0];
+      return;
+    }
+    window.location.href = login;
+  }
+
+  function setStatus(el, msg, isError) {
+    if (!el) return;
+    el.textContent = msg || '';
+    el.classList.toggle('is-error', !!isError);
+  }
+
+  function loadEpaycoScript() {
+    if (window.ePayco && window.ePayco.checkout && typeof window.ePayco.checkout.configure === 'function') {
+      return Promise.resolve();
+    }
+    var existing = document.querySelector('script[data-p2l-epayco="1"]');
+    if (existing) {
+      return new Promise(function (resolve, reject) {
+        if (existing.getAttribute('data-loaded') === '1') resolve();
+        else {
+          existing.addEventListener('load', function () { resolve(); }, { once: true });
+          existing.addEventListener('error', function () { reject(new Error(t('status.epaycoLoad'))); }, { once: true });
+        }
+      });
+    }
+    return new Promise(function (resolve, reject) {
+      var s = document.createElement('script');
+      s.src = 'https://checkout.epayco.co/checkout.js';
+      s.async = true;
+      s.setAttribute('data-p2l-epayco', '1');
+      s.onload = function () {
+        s.setAttribute('data-loaded', '1');
+        resolve();
+      };
+      s.onerror = function () { reject(new Error(t('status.epaycoLoad'))); };
+      document.head.appendChild(s);
+    });
+  }
+
+  function openEpaycoCheckout(attrs) {
+    var key = attrs && attrs['data-epayco-key'];
+    if (!key) return Promise.reject(new Error(t('status.noAttrs')));
+    return loadEpaycoScript().then(function () {
+      if (!window.ePayco || !window.ePayco.checkout || typeof window.ePayco.checkout.configure !== 'function') {
+        throw new Error(t('status.epaycoLoad'));
+      }
+      var handler = window.ePayco.checkout.configure({
+        key: String(key),
+        test: String(attrs['data-epayco-test']) === 'true'
+      });
+      if (!handler || typeof handler.open !== 'function') throw new Error(t('status.epaycoLoad'));
+      var payload = {
+        name: attrs['data-epayco-name'],
+        description: attrs['data-epayco-description'],
+        invoice: attrs['data-epayco-invoice'],
+        currency: attrs['data-epayco-currency'] || 'cop',
+        amount: attrs['data-epayco-amount'],
+        tax_base: attrs['data-epayco-tax-base'] || '0',
+        tax: attrs['data-epayco-tax'] || '0',
+        tax_ico: attrs['data-epayco-tax-ico'] || '0',
+        country: attrs['data-epayco-country'] || 'co',
+        lang: 'es',
+        external: attrs['data-epayco-external'] || 'false',
+        response: attrs['data-epayco-response'],
+        confirmation: attrs['data-epayco-confirmation'],
+        extra1: attrs['data-epayco-extra1'],
+        extra2: attrs['data-epayco-extra2'],
+        extra3: attrs['data-epayco-extra3'],
+        name_billing: attrs['data-epayco-extra3'],
+        email_billing: attrs['data-epayco-extra2']
+      };
+      if (attrs['data-epayco-extra4']) payload.extra4 = attrs['data-epayco-extra4'];
+      var pending = handler.open(payload);
+      return { pending: pending };
+    });
+  }
+
+  async function buyPlan(planId, companyName, buyerEmail, btn, statusEl, plans) {
+    var plan = (plans || []).find(function (p) { return Number(p.id) === Number(planId); });
+    if (plan && plan.contactOnly) {
+      var waContact = plan.whatsappUrl || (FALLBACK_PLANS[4] && FALLBACK_PLANS[4].whatsappUrl);
+      if (waContact) window.open(waContact, '_blank', 'noopener');
+      return;
+    }
+    if (enterprisePriceOpen(plan)) {
+      var waAgreed = plan.whatsappUrl || (FALLBACK_PLANS[4] && FALLBACK_PLANS[4].whatsappUrl);
+      if (waAgreed) window.open(waAgreed, '_blank', 'noopener');
+      else setStatus(statusEl, t('price.agreed'), false);
+      return;
+    }
+    if (!companyName || !buyerEmail) {
+      setStatus(statusEl, t('status.need'), true);
+      return;
+    }
+    if (!/^[^\s@]+@gmail\.com$/i.test(buyerEmail)) {
+      setStatus(statusEl, t('status.gmail'), true);
+      return;
+    }
+    btn.disabled = true;
+    setStatus(statusEl, t('status.preparing'), false);
+    try {
+      var price = plan ? Number(plan.priceCop) || 0 : -1;
+
+      if (price === 0) {
+        setStatus(statusEl, t('status.creating'), false);
+        var freeRes = await fetch(API + '/public/checkout-free', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ planId: planId, buyerEmail: buyerEmail, companyName: companyName })
+        });
+        var freeData = await freeRes.json().catch(function () { return {}; });
+        if (!freeRes.ok) throw new Error(freeData.message || freeData.error || t('status.trialError'));
+        var co = freeData.company || {};
+        setStatus(
+          statusEl,
+          (freeData.reused ? t('status.hadTrial') : t('status.created')) +
+            t('status.entering'),
+          false
+        );
+        try {
+          if (freeData.companyKey) {
+            sessionStorage.setItem('tg_wa_company_key_' + co.id, freeData.companyKey);
+          }
+        } catch (_) {}
+        setTimeout(function () {
+          goToCompanyLogin(freeData.loginUrl, freeData.panelUrl, co.id);
+        }, 900);
+        return;
+      }
+
+      setStatus(statusEl, t('status.checkout'), false);
+      var cfgRes = await fetch(API + '/public/checkout-config', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ planId: planId, buyerEmail: buyerEmail, companyName: companyName })
+      });
+      var cfg = await cfgRes.json().catch(function () { return {}; });
+      if (!cfgRes.ok) throw new Error(cfg.message || cfg.error || 'Error checkout-config');
+
+      if (cfg.free) {
+        var free2 = await fetch(API + '/public/checkout-free', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ planId: planId, buyerEmail: buyerEmail, companyName: companyName })
+        });
+        var free2Data = await free2.json().catch(function () { return {}; });
+        if (!free2.ok) throw new Error(free2Data.message || t('status.freeError'));
+        setStatus(statusEl, t('status.trialReady'), false);
+        setTimeout(function () {
+          goToCompanyLogin(free2Data.loginUrl, free2Data.panelUrl, (free2Data.company || {}).id);
+        }, 900);
+        return;
+      }
+
+      if (!cfg.epaycoButtonAttributes) throw new Error(t('status.noAttrs'));
+      setStatus(statusEl, t('status.opening'), false);
+      openEpaycoCheckout(cfg.epaycoButtonAttributes).then(function (result) {
+        setStatus(statusEl, t('status.opened'), false);
+        var pending = result && result.pending;
+        if (pending && typeof pending.catch === 'function') {
+          pending.catch(function (err) {
+            setStatus(statusEl, (err && err.message) || t('status.epaycoLoad'), true);
+          });
+        }
+      }).catch(function (err) {
+        setStatus(statusEl, (err && err.message) || t('status.epaycoLoad'), true);
+      });
+    } catch (e) {
+      setStatus(statusEl, e.message || String(e), true);
+    } finally {
+      btn.disabled = false;
+    }
+  }
+
+  async function loadPlans() {
+    try {
+      var res = await fetch(API + '/public/plans', { headers: { Accept: 'application/json' } });
+      var data = await res.json().catch(function () { return {}; });
+      if (!res.ok || !Array.isArray(data.plans) || !data.plans.length) throw new Error('fallback');
+      lastPlans = data.plans;
+      renderPlans(lastPlans);
+    } catch (_) {
+      lastPlans = FALLBACK_PLANS;
+      renderPlans(lastPlans);
+    }
+  }
+
+  snapshotI18n();
+  try {
+    if (localStorage.getItem('p2l-landing-lang') === 'en') lang = 'en';
+  } catch (_) {}
+  document.querySelectorAll('.lang-switch button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      lang = btn.getAttribute('data-lang') === 'en' ? 'en' : 'es';
+      try { localStorage.setItem('p2l-landing-lang', lang); } catch (_) {}
+      applyLang();
+    });
+  });
+  applyLang();
+  loadPlans();
+})();
+  </script>
+  <script>
+    (function () {
+      var root = document.getElementById('p2l-wa');
+      var fab = document.getElementById('p2l-wa-fab');
+      var panel = document.getElementById('p2l-wa-panel');
+      var closeBtn = document.getElementById('p2l-wa-close');
+      var form = document.getElementById('p2l-wa-form');
+      var text = document.getElementById('p2l-wa-text');
+      if (!root || !fab || !panel) return;
+      function setOpen(open) {
+        if (open && root.classList.contains('is-off')) return;
+        root.classList.toggle('is-open', open);
+        panel.hidden = !open;
+        fab.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open && text) text.focus();
+      }
+      fab.addEventListener('click', function () { setOpen(true); });
+      if (closeBtn) closeBtn.addEventListener('click', function () { setOpen(false); });
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') setOpen(false);
+      });
+      function waWithText(base, msg) {
+        try {
+          var u = new URL(base);
+          u.searchParams.set('text', msg);
+          return u.toString();
+        } catch (e) {
+          return '';
+        }
+      }
+      if (form) {
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+          var msg = (text && text.value || '').trim();
+          var base = root.getAttribute('data-wa-link') || '';
+          if (!msg) {
+            if (text) text.focus();
+            return;
+          }
+          if (!base || root.classList.contains('is-off')) return;
+          var href = waWithText(base, msg);
+          if (href) window.open(href, '_blank', 'noopener');
+        });
+      }
+      var id = root.getAttribute('data-company-id') || '';
+      if (!id) return;
+      fetch('https://www.refactorii.com/p2l-tenant/api/p2l-techguard-whatsapp-bot/public/company/' + encodeURIComponent(id) + '/channels')
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (data) {
+          if (!data || !data.whatsapp || !data.waLink) return;
+          root.classList.remove('is-off');
+          root.setAttribute('data-wa-link', data.waLink);
+          document.querySelectorAll('.js-enterprise-wa').forEach(function (a) {
+            a.setAttribute('href', data.waLink);
+          });
+        })
+        .catch(function () {});
+    })();
+  </script>
+</body>
+</html>
