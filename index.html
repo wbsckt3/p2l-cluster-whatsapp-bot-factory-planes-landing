@@ -375,6 +375,7 @@
     }
     .feat-list strong { font-family: Sora, sans-serif; font-size: 1rem; }
     .feat-list span { color: var(--muted); }
+    .feat-list code { font-size: 0.85em; background: #e9f8f0; color: #0e6840; padding: 1px 6px; border-radius: 6px; }
     .svc-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
     .svc {
       padding: 18px 18px 18px 20px;
@@ -945,18 +946,51 @@
       </div>
     </section>
 
-    <section class="section" id="automatiza">
+    <section class="section" id="skills">
+      <div class="wrap split">
+        <div>
+          <p class="section__tag" data-i18n="sk.tag">Contexto de tu negocio</p>
+          <h2 class="section__title" data-i18n="sk.title">Cada agente trabaja con el skill de su área</h2>
+          <p class="section__lead" data-i18n-html="sk.lead">
+            Su base de conocimiento sale de un <strong>skill propio del área</strong> (ventas, soporte, operaciones…) y de las
+            <strong>reglas de negocio de tu empresa</strong>. Son archivos de texto que tu equipo escribe y actualiza: el agente responde con tu
+            modelo de negocio, no con respuestas genéricas.
+          </p>
+          <a class="btn btn--ghost" href="https://github.com/wbsckt3/tuk-tuk-mobility/tree/gh-pages/skills" target="_blank" rel="noopener" data-i18n="sk.cta">Ver el ejemplo de Tuk Tuk</a>
+        </div>
+        <ul class="feat-list">
+          <li>
+            <strong data-i18n="sk.rules.t">Reglas de negocio de la empresa</strong>
+            <span data-i18n-html="sk.rules.p">Lo que vale para todas las áreas: quién eres, precios, políticas y tono. En Tuk Tuk: <code>skill-negocio-tuk-tuk.md</code>.</span>
+          </li>
+          <li>
+            <strong data-i18n="sk.area.t">Skill propio de cada área</strong>
+            <span data-i18n-html="sk.area.p">Lo que sabe y hace el agente de esa área: preguntas frecuentes, pasos y a quién pasar el chat. En Tuk Tuk: <code>tuk-tuk-ventas.md</code>.</span>
+          </li>
+          <li>
+            <strong data-i18n="sk.route.t">El área llega con el visitante</strong>
+            <span data-i18n="sk.route.p">El pixel identifica desde qué página y área escribe la persona, y el agente usa el skill que corresponde desde el primer mensaje.</span>
+          </li>
+          <li>
+            <strong data-i18n="sk.own.t">Quien escribe el skill lo mide</strong>
+            <span data-i18n="sk.own.p">Cada área tiene su monitor: el responsable del skill ve visitas, conversaciones y resultados de su área.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="automatiza">
       <div class="wrap split split--rev">
         <div>
           <p class="section__tag" data-i18n="au.tag">Automatización</p>
-          <h2 class="section__title" data-i18n="au.title">Automatiza tus grupos y chats de WhatsApp</h2>
+          <h2 class="section__title" data-i18n="au.title">Automatiza los chats 1:1 de tu empresa</h2>
           <p class="section__lead" data-i18n="au.lead">Menos trabajo manual, respuestas al instante y ningún cliente sin seguimiento.</p>
           <a class="btn btn--primary" href="#planes" data-i18n="au.cta">Quiero automatizar mi WhatsApp</a>
         </div>
         <ul class="feat-list">
           <li>
             <strong data-i18n="au.tickets.t">Tickets automatizados</strong>
-            <span data-i18n="au.tickets.p">Marca consultas automáticamente, define SLAs, crea y asigna tickets en chats de grupo.</span>
+            <span data-i18n="au.tickets.p">Marca consultas automáticamente, define SLAs, y crea y asigna tickets desde cada conversación con tus clientes.</span>
           </li>
           <li>
             <strong data-i18n="au.auto.t">Respuestas automáticas</strong>
@@ -974,7 +1008,7 @@
       </div>
     </section>
 
-    <section class="section section--alt" id="servicios">
+    <section class="section" id="servicios">
       <div class="wrap">
         <p class="section__tag" data-i18n="sv.tag">Integraciones</p>
         <h2 class="section__title" data-i18n="sv.title">Con tus servicios preferidos</h2>
@@ -1007,108 +1041,6 @@
       </div>
     </section>
 
-    <section class="section section--alt" id="conectar">
-      <div class="wrap">
-        <p class="section__tag" data-i18n="connect.tag">Para tu equipo técnico</p>
-        <h2 class="section__title" data-i18n="connect.title">Cómo se conecta el número</h2>
-        <p class="section__lead" data-i18n-html="connect.lead">
-          Tu número de WhatsApp Business se conecta a través de Meta (Facebook Developers).
-          Tú creas la app y el número; P2L es el <strong>webhook</strong>: la dirección
-          donde Meta entrega los mensajes para que el bot de tu empresa responda.
-        </p>
-        <ol class="steps">
-          <li data-i18n-html="connect.s1">
-            <strong>Crea tu app en Meta</strong>
-            En <a href="https://developers.facebook.com/apps/" target="_blank" rel="noopener">My Apps</a>
-            crea una app, agrega el producto WhatsApp y vincula el número.
-            Guía:
-            <a href="https://developers.facebook.com/docs/whatsapp/cloud-api/get-started/" target="_blank" rel="noopener">Get started · Cloud API</a>.
-          </li>
-          <li data-i18n-html="connect.s2">
-            <strong>Copia los datos del número</strong>
-            En <em>WhatsApp → API Setup</em> o
-            <a href="https://business.facebook.com/latest/whatsapp_manager/phone_numbers" target="_blank" rel="noopener">WhatsApp Manager</a>:
-            Phone Number ID, WABA ID, App ID, App Secret.
-            Token permanente desde
-            <a href="https://business.facebook.com/settings/system-users" target="_blank" rel="noopener">System Users</a>.
-            Docs números:
-            <a href="https://developers.facebook.com/docs/whatsapp/cloud-api/phone-numbers/" target="_blank" rel="noopener">Business phone numbers</a>.
-          </li>
-          <li data-i18n-html="connect.s3">
-            <strong>Pégalos en tu panel P2L</strong>
-            En el dashboard de empresa (o P2L si tu plan lo incluye) guardas esos datos de forma segura.
-          </li>
-          <li data-i18n-html="connect.s4">
-            <strong>Activa el webhook de P2L</strong>
-            En Meta: <em>WhatsApp → Configuration</em>
-            (<a href="https://developers.facebook.com/docs/whatsapp/cloud-api/guides/set-up-webhooks/" target="_blank" rel="noopener">Set up webhooks</a>).
-            Pegas la URL de webhook de P2L y el Verify Token. Ahí Meta enviará cada mensaje entrante.
-          </li>
-        </ol>
-        <p class="section__lead" style="margin-top:20px;margin-bottom:12px" data-i18n-html="connect.links">
-          Enlaces rápidos:
-          <a href="https://developers.facebook.com/docs/whatsapp/cloud-api/get-started/" target="_blank" rel="noopener">Get started</a>
-          ·
-          <a href="https://developers.facebook.com/apps/" target="_blank" rel="noopener">My Apps</a>
-          ·
-          <a href="https://business.facebook.com/" target="_blank" rel="noopener">Business Suite</a>
-          ·
-          <a href="https://business.facebook.com/settings/system-users" target="_blank" rel="noopener">System Users</a>
-          ·
-          <a href="https://developers.facebook.com/docs/whatsapp/cloud-api/guides/set-up-webhooks/" target="_blank" rel="noopener">Webhooks</a>
-        </p>
-        <p class="section__lead" style="margin-top:0;margin-bottom:12px" data-i18n-html="connect.pricing">
-          <strong style="color:var(--ink)">Precios Meta WhatsApp (oficial):</strong>
-          consulta el rate card por país y categoría (marketing, utility, auth, servicio) en
-          <a href="https://developers.facebook.com/docs/whatsapp/pricing" target="_blank" rel="noopener">developers.facebook.com/docs/whatsapp/pricing</a>
-          ·
-          <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing" target="_blank" rel="noopener">Business Messaging · Pricing</a>
-          · actualizaciones
-          <a href="https://developers.facebook.com/docs/whatsapp/pricing/updates-to-pricing/" target="_blank" rel="noopener">Updates to pricing</a>
-          (incluye COP y cambios oct&nbsp;2026).
-        </p>
-        <p class="section__lead" style="margin-top:0;margin-bottom:0" data-i18n-html="connect.what">
-          <strong style="color:var(--ink)">¿Qué es P2L en este flujo?</strong>
-          No es tu número de WhatsApp. Es el servidor que recibe los mensajes (webhook) y ejecuta el
-          agente IA de tu empresa (skills, flujos, MCP) para contestar. Tú decides el contenido;
-          Meta lleva el mensaje; P2L lo procesa.
-        </p>
-      </div>
-    </section>
-
-    <section class="section" id="negocio">
-      <div class="wrap">
-        <p class="section__tag" data-i18n="biz.tag">Empresa</p>
-        <h2 class="section__title" data-i18n="biz.title">Skill · LSP · MCP del negocio</h2>
-        <p class="section__lead" data-i18n-html="biz.lead">
-          Son el <strong>contexto que tu empresa provee</strong> para que la IA responda con tu operación
-          (no con respuestas genéricas).
-        </p>
-        <div class="pillars">
-          <div class="pillar">
-            <h3>Skills</h3>
-            <p data-i18n="biz.skills">
-              El “saber” del bot: menú, precios, FAQs, políticas y tonos en markdown.
-              Es lo que la IA lee para contestar como tu marca.
-            </p>
-          </div>
-          <div class="pillar">
-            <h3>LSP</h3>
-            <p data-i18n="biz.lsp">
-              Language Server Protocol de conversación: valida el flujo (slots faltantes, intents rotos)
-              para que el bot no improvise pasos incompletos al atender al cliente.
-            </p>
-          </div>
-          <div class="pillar">
-            <h3>MCP</h3>
-            <p data-i18n="biz.mcp">
-              Model Context Protocol: conecta datos vivos (pedidos, citas, facturas, CRM, BD)
-              para que las respuestas usen información real de tu negocio, no solo texto fijo.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
@@ -1237,11 +1169,11 @@
       'ag.handoff.t': 'Hands the chat to your team',
       'ag.handoff.p': 'When it does not know the answer, it sends it to the right person.',
       'au.tag': 'Automation',
-      'au.title': 'Automate your WhatsApp groups and chats',
+      'au.title': 'Automate your company 1:1 chats',
       'au.lead': 'Less manual work, instant answers and no customer left without follow-up.',
       'au.cta': 'I want to automate my WhatsApp',
       'au.tickets.t': 'Automated tickets',
-      'au.tickets.p': 'Tag questions automatically, set SLAs, create and assign tickets in group chats.',
+      'au.tickets.p': 'Tag questions automatically, set SLAs, and create and assign tickets from every conversation with your customers.',
       'au.auto.t': 'Automatic replies',
       'au.auto.p': 'Answer customer questions instantly with predefined or AI-generated messages.',
       'au.kw.t': 'Keyword triggers',
@@ -1257,7 +1189,18 @@
       'sv.whatsapp': 'Your official WhatsApp Business number, own or shared.',
       'sv.db': 'Conversations, orders and customers stored in your database.',
       'sv.geo': 'Addresses, routes and location for businesses on the move.',
-      'connect.tag': 'For your tech team',
+      'sk.tag': 'Your business context',
+      'sk.title': 'Each agent works with its area skill',
+      'sk.lead': 'Its knowledge base comes from <strong>the area’s own skill</strong> (sales, support, operations…) and from <strong>your company business rules</strong>. They are text files your team writes and updates: the agent answers with your business model, not with generic replies.',
+      'sk.cta': 'See the Tuk Tuk example',
+      'sk.rules.t': 'Company business rules',
+      'sk.rules.p': 'What applies to every area: who you are, prices, policies and tone. At Tuk Tuk: <code>skill-negocio-tuk-tuk.md</code>.',
+      'sk.area.t': 'Each area’s own skill',
+      'sk.area.p': 'What that area’s agent knows and does: FAQs, steps and who to hand the chat to. At Tuk Tuk: <code>tuk-tuk-ventas.md</code>.',
+      'sk.route.t': 'The area comes with the visitor',
+      'sk.route.p': 'The pixel identifies which page and area the person writes from, and the agent uses the matching skill from the first message.',
+      'sk.own.t': 'Whoever writes the skill measures it',
+      'sk.own.p': 'Each area has its monitor: the skill owner sees visits, conversations and results for their area.',
       'wa.fab': 'How can we help you?',
       'wa.panel': 'WhatsApp support',
       'wa.close': 'Close',
