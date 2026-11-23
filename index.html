@@ -375,6 +375,17 @@
     }
     .feat-list strong { font-family: Sora, sans-serif; font-size: 1rem; }
     .feat-list span { color: var(--muted); }
+    .learn-link {
+      display: inline-block;
+      margin-top: 4px;
+      font-family: Sora, sans-serif;
+      font-weight: 700;
+      color: #0e6840;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      text-decoration-thickness: 2px;
+    }
+    .learn-link:hover { color: #25d366; }
     .feat-list code { font-size: 0.85em; background: #e9f8f0; color: #0e6840; padding: 1px 6px; border-radius: 6px; }
     .svc-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
     .svc {
@@ -928,6 +939,7 @@
           <p class="section__tag" data-i18n="ag.tag">Inteligencia artificial</p>
           <h2 class="section__title" data-i18n="ag.title">Un agente de IA que conoce tu negocio</h2>
           <p class="section__lead" data-i18n="ag.lead">No responde con frases genéricas: habla con tu información, tu tono y tus datos reales.</p>
+          <a class="learn-link" href="https://agentskills.io/skill-creation/quickstart" target="_blank" rel="noopener noreferrer" data-i18n="ag.learn">Aprende ingeniería de contexto para IA →</a>
         </div>
         <ul class="feat-list">
           <li>
@@ -1161,6 +1173,7 @@
       'ag.tag': 'Artificial intelligence',
       'ag.title': 'An AI agent that knows your business',
       'ag.lead': 'No generic answers: it speaks with your information, your tone and your real data.',
+      'ag.learn': 'Learn context engineering for AI →',
       'ag.kb.t': 'Answers from your knowledge base',
       'ag.kb.p': 'Add your FAQs and documents, and the agent handles common questions on its own.',
       'ag.live.t': 'Checks real-time data',
